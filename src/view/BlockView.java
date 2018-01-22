@@ -22,12 +22,19 @@ public class BlockView extends JPanel {
 	// Méthode DrawBlock() pour dessiner un Block sur la Frame
 	public static void drawBlock(Block b, Graphics g) {
 		Image img = null;
-		try {
-			img = ImageIO.read(new File("img/" + b.getID() + ".png"));
+		
+		if(b.getID() == 0) {
+			img = null;
 		}
-		catch(IOException e) {
-			e.printStackTrace();
+		else {
+			try {
+				img = ImageIO.read(new File("img/" + b.getID() + ".png"));
+			}
+			catch(IOException e) {
+				e.printStackTrace();
+			}
 		}
+
 		g.drawImage(img, b.getX()*64, b.getY()*64, null);
 	}
 }

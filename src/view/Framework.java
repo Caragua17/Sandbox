@@ -12,6 +12,9 @@ import model.World;
 public class Framework extends JFrame {
 	
 	private static final long serialVersionUID = 1L;
+	public static final int borderTop = 22;
+	public static final int frameX = 64*World.sizeX;
+	public static final int frameY = 64*World.sizeY + borderTop;
 	private WorldView world;
 
 	// Constructeur par defaut de la Frame
@@ -21,8 +24,8 @@ public class Framework extends JFrame {
 		
 		this.setTitle("Terraria: NewGen");
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-		this.setSize(200, 200);
-		//this.setResizable(false);
+		this.setSize(frameX, frameY);
+		this.setResizable(false);
 		this.setLocationRelativeTo(null);
 		this.setContentPane(world);
 		this.setVisible(true);
