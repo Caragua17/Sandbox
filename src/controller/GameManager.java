@@ -7,11 +7,24 @@ import view.Framework;
  * @author Thomas
  */
 
-public class GameManager {
+public class GameManager extends Thread{
 
-	public static void main(String[] args) {
+	public GameManager() {
+		
+	}
 	
+	public static void main(String[] args) {
+		GameManager gm = new GameManager();
+		gm.start();
+	}
+	
+	public void run() {
 		@SuppressWarnings("unused")
 		Framework Frame = new Framework();
+		
+		while (!Thread.currentThread().isInterrupted()) {
+			Frame.update();
+			System.out.println("traitement du thread");
+		}
 	}
 }

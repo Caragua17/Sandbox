@@ -19,7 +19,7 @@ public class BlockView extends JPanel {
 
 	private static final long serialVersionUID = 1L;
 	
-	// Méthode DrawBlock() pour dessiner un Block sur la Frame
+	// Methode DrawBlock() pour dessiner un Block sur la Frame
 	public static void drawBlock(Block b, Graphics g) {
 		Image img = null;
 		

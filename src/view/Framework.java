@@ -1,5 +1,7 @@
 package view;
 
+import java.awt.Color;
+
 import javax.swing.JFrame;
 
 import model.World;
@@ -23,6 +25,7 @@ public class Framework extends JFrame {
 		world = new WorldView();
 		
 		this.setTitle("Terraria: NewGen");
+		this.setBackground(Color.WHITE);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		
 		if(OS.indexOf("win") >= 0)
@@ -36,5 +39,9 @@ public class Framework extends JFrame {
 		this.setLocationRelativeTo(null);
 		this.setContentPane(world);
 		this.setVisible(true);
+	}
+	
+	public void update() {
+		world.repaint();
 	}
 }

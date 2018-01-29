@@ -26,7 +26,7 @@ public class World {
 		}
 	}
 	
-	// GET World en totalité
+	// GET World total
 	public static Block[][] getWorld(){
 		return world;
 	}
