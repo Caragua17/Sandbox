@@ -4,7 +4,7 @@ import view.Framework;
 
 /**
  * @update 12.01.18
- * @author Thomas Contini
+ * @author Thomas
  */
 
 public class GameManager {

@@ -28,7 +28,7 @@ public class BlockView extends JPanel {
 		}
 		else {
 			try {
-				img = ImageIO.read(new File("img/" + b.getID() + ".png"));
+				img = ImageIO.read(new File("img/block/" + b.getID() + ".png"));
 			}
 			catch(IOException e) {
 				e.printStackTrace();

@@ -16,22 +16,17 @@ public class World {
 	// initialisation du tableau representant le monde
 	public static void initWorld() {
 		
-		double alea;
-		
 		for(int i=0; i<sizeX; i++) {
 			for(int j=0; j<sizeY; j++) {
-				alea = Math.random();
-				if(alea > 0.1) {
-					world[i][j] = new Block(i,j,1);
-				}
-				else {
+				if(j<5)
 					world[i][j] = new Block(i,j,0);
-				}
+				else
+					world[i][j] = new Block(i,j,1);
 			}
 		}
 	}
 	
-	// GET World en totalitÃ©
+	// GET World en totalité
 	public static Block[][] getWorld(){
 		return world;
 	}
