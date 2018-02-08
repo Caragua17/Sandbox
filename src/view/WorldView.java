@@ -22,13 +22,14 @@ public class WorldView extends JPanel implements KeyListener {
 	
 	// Constructeur par defaut de la vue du Monde
 	public WorldView() {
-
+		this.setBackground(Color.WHITE);
+		this.addKeyListener(this);
+		this.setFocusable(true);
+		this.setFocusTraversalKeysEnabled(false);
 	}
 	
 	// Gestion de l'affichage du Monde
 	public void paintComponent(Graphics g) {
-		this.setBackground(Color.WHITE);
-		
 		for(int i=0; i<World.sizeX; i++) {
 			for(int j=0; j<World.sizeY; j++) {
 				BlockView.drawBlock(World.getWorld()[i][j],g);
@@ -40,13 +41,14 @@ public class WorldView extends JPanel implements KeyListener {
 	public void keyPressed(KeyEvent e) {
 		
 		int key = e.getKeyCode();
+		System.out.println(key);
 		
 		switch(key) {
-		case KeyEvent.VK_KP_RIGHT:
+		case 39:
 			player.move("right");
 			System.out.println("right");
 			break;
-		case KeyEvent.VK_KP_LEFT:
+		case 37:
 			player.move("left");
 			System.out.println("left");
 			break;

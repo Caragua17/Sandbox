@@ -40,8 +40,4 @@ public class Framework extends JFrame {
 		this.setContentPane(world);
 		this.setVisible(true);
 	}
-	
-	public void update() {
-		world.repaint();
-	}
 }
