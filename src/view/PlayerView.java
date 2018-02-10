@@ -10,7 +10,7 @@ import javax.swing.JPanel;
 import model.Player;
 
 /**
- * @update 29.01.18
+ * @update 10.02.18
  * @author Thomas
  */
 
@@ -18,7 +18,7 @@ public class PlayerView extends JPanel {
 
 	private static final long serialVersionUID = 1L;
 	
-	// Methode Drawplayer() pour dessiner un Block sur la Frame
+	// Methode Drawplayer() pour dessiner le player sur la Frame
 	public static void drawPlayer(Player p, Graphics g) {
 		Image img = null;
 		

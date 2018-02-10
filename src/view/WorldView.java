@@ -11,7 +11,7 @@ import model.Player;
 import model.World;
 
 /**
- * @update 19.01.18
+ * @update 10.02.18
  * @author Thomas
  */
 
@@ -30,6 +30,8 @@ public class WorldView extends JPanel implements KeyListener {
 	
 	// Gestion de l'affichage du Monde
 	public void paintComponent(Graphics g) {
+		super.paintComponent(g);
+		
 		for(int i=0; i<World.sizeX; i++) {
 			for(int j=0; j<World.sizeY; j++) {
 				BlockView.drawBlock(World.getWorld()[i][j],g);
